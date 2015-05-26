@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Desafio Concrete Front-end</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all">
+	
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="all">
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="all">
+	<script data-main="js/app" src="js/libs/require.js"></script>
+</head>
+<body>
+
+<div class="content"></div>
+
+<script id="template-pagination" type="text/x-handlebars-template">
+<div class="container">
+	<div class="page-header">
+		<h1>Desafio Concrete Front-end</h1>
+	</div>
+</div>	
+</script>
+
+<script id="template" type="text/x-handlebars-template">
+	<div class="container">
+
+			{{#everyNth [].model  3}}
+				{{#if isModZeroNotFirst}}
+			    	</div>
+			  	{{/if}}
+
+				{{#if isModZero}}
+				    <div class="row">
+
+
+				{{/if}}
+
+						<div class="col-md-4">
+						    <div class="panel panel-default">
+				 			<div class="panel-body">
+				 			<div class="div-transparent-share">
+								<a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+								<a href="https://instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+								<a href="https://dribbble.com/shots" target="_blank"><i class="fa fa-dribbble"></i></a>
+							</div>
+							<a href="#shots/{{this.id}}">
+									<img src="img/haroldo.jpg" width="400" height="300" alt="shots shots shots everybody!" class="img-responsive center-block" />
+									
+									<div class="col-xs-6-details div-transparent center-block">
+										<span class="detail-span">Haroldo Costa</span>
+										<div class="detais-views pull-right">
+											<i class="glyphicon glyphicon-eye-open"></i>
+											<span>{{this.views_count}}</span>
+										</div>
+									</div>
+									
+							</a>
+
+
+							</div>
+							</div>		
+						</div>
+
+				{{#if isLast}}
+	   				</div>
+	   				
+	 			{{/if}}
+
+			{{/everyNth}}
+
+	</div>
+
+</script>
+
+<script id="templateShotDetail" type="text/x-handlebars-template">
+	<div class="container">
+
+		<div class="page-header">
+		  <h1>Haroldo Costa</h1>
+		</div>
+
+		<a href="javascript:history.back();" style="color:red;"><i class="glyphicon glyphicon-chevron-left" ></i>Voltar</a>
+
+
+		<div class="row row-centered">
+
+			<div class="col-md-4 col-centered center-block">
+				<div class="panel panel-default">
+				
+				 	<div class="panel-body">
+				 		<div class="div-transparent-share">
+							<a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+							<a href="https://instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+							<a href="https://dribbble.com/shots" target="_blank"><i class="fa fa-dribbble"></i></a>
+						</div>
+						<img src="img/haroldo.jpg" width="400" height="300" alt="shots shots shots everybody!" class="img-responsive center-block" />
+						<div class="col-xs-6-details div-transparent center-block">
+							<span class="detail-span">Haroldo Costa</span>
+							<div class="detais-views pull-right">
+								<i class="glyphicon glyphicon-eye-open"></i>
+								<span>{{views_count}}</span>
+							</div>
+						</div>
+						
+						<img src="img/haroldo.jpg"  alt="shots shots shots everybody!" class="img-responsive circle-img" />
+						<span class="player_name">Meu nome</span>
+						<p class="player_description">Haroldo sou formado em analise de sistema. E gosto muito de aprender com novos desafios este me ajudou a entender alguns  framework que ainda não conhecia. Foi bastante proveitoso este dias que fiquei nesse desafio aprendei muito.</p>
+					</div>	
+				</div>		
+			</div>
+
+		</div>
+	</div>
+
+</script>
+
+
+</body>
+</html>
