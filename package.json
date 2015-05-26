@@ -12,5 +12,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/guilhermecruzpleimo/Disclaimer.git"
+  },
+  "author": "Guilherme Cândido e Cruz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhermecruzpleimo/Disclaimer/issues"
+  },
+  "homepage": "https://github.com/guilhermecruzpleimo/Disclaimer"
 }
